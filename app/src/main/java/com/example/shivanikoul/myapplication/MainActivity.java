@@ -2,6 +2,7 @@ package com.example.shivanikoul.myapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -11,6 +12,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toast.makeText(this, "This is my toast in onCreate", Toast.LENGTH_SHORT).show();
+        Toast centerToast =Toast.makeText( this,  "I am in center",Toast.LENGTH_SHORT);
+        centerToast.setGravity(Gravity.CENTER,0,0);
+        centerToast.show();
     }
 
 
